@@ -4,48 +4,69 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Expense Tracker</title>
-  <link rel="stylesheet" href="assets/style/style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
   <script defer src="index.js"></script>
 </head>
 <body>
-  <div class="container card">
-    <div class="container-child">
-      <div class="first">
-        <h1>Expense Tracker</h1>
-        <label>Category</label><br />
-        <input id="Category" type="text" placeholder="enter a category" style="padding: 3px;" /><br />
-        <label>Amount</label><br />
-        <input id="Amount" type="number" placeholder="Enter amount" style="padding: 3px;" /><br />
-        <button class="btn btn-success" id="addBtn">Add Expense</button>
+  <div class="container my-4">
+    <div class="card p-4 shadow">
+      <div class="row g-4">
+        <!-- Input Section -->
+        <div class="col-md-6">
+          <h1 class="h3 mb-3 text-center text-md-start">Expense Tracker</h1>
+          <div class="mb-3">
+            <label class="form-label">Category</label>
+            <input id="Category" type="text" class="form-control" placeholder="Enter a category" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Amount</label>
+            <input id="Amount" type="number" class="form-control" placeholder="Enter amount" />
+          </div>
+          <button class="btn btn-success w-100" id="addBtn">Add Expense</button>
+        </div>
+
+
+        <div class="col-md-6">
+          <div class="row text-center">
+            <div class="col-6">
+              <h4>Total</h4>
+              
+              <h3 id="amt"  >$<span id="total" class="text-success" >0</span></h3>
+            </div>
+            <div class="col-6">
+              <h4>Monthly Average</h4>
+              <h3 id="amt">$<span id="Avarage"class="text-success">0</span></h3>
+            </div>
+            <div class="col-12 mt-3">
+              <h4>Entries</h4>
+              <h3><span id="Entery">0</span></h3>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="second">
-        <div class="scnd-expns">
-          <h2>Total</h2>
-          <h3 class="amount">$<span id="total">0</span></h3>
-          <h2>Monthly Average</h2>
-          <h3 class="amount">$<span id="Avarage">0</span></h3>
-        </div>
-        <div class="scnd-expns">
-          <h2>Entries</h2>
-          <h3 class="amount"><span id="Entery">0</span></h3>
+      <div class="row my-4">
+        <div class="col-12">
+          <div class="card p-3">
+            <canvas id="expenseChart" style="max-height:300px;"></canvas>
+          </div>
         </div>
       </div>
-    </div>
 
-   <div class="chart-box">
-  <canvas id="expenseChart"></canvas>
-</div>
-
-
-    <div>
-     
-      <div id="exapenseList" class="bottm"></div>
+  
+      <div class="row">
+        <div class="col-12">
+          <div id="exapenseList" class="table-responsive"></div>
+        </div>
+      </div>
     </div>
   </div>
-  
 </body>
 </html>
