@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+.first{
+    width: 50%;
+    
+   
+   
+}
+.second{
+    width: 50%;
+    display: flex;
+    gap: 52px;
+
+}
+.first input{
+    width: 70%;
+    margin-bottom: 12px;
+    border-radius: 5px;
+}
+.container-child{
+     
+      display: flex;
+
+}
+.container-child{
+    margin-left: 50px;
+}
+.container{
+    width: 80%;
+     border: black solid 1px;
+     padding: 130px;
+     margin: 130px;
+}
+
+
+.chart-box {
+  width: 200px;
+  height: 200px;
+ position: relative;
+top: 0px;
+left: 650px;
+}
+
+.chart-box canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    gap: 170px;
+     padding: 40px;
+     border-bottom: 1px solid #cccccc;
+}
+.first h1{
+    padding-bottom: 10px;
+}
+.table{
+    margin-top: 140px;
+    margin: none;
+}
